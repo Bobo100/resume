@@ -78,6 +78,9 @@ p {
 }
 
 .ability li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   list-style-type: none;
   padding-top: 10px;
 }
@@ -89,7 +92,6 @@ p {
 }
 
 .bar {
-  display: inline-flex;
   border: solid 1px #cccccc;
   width: 100px;
   height: 15px;
