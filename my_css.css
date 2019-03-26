@@ -1,8 +1,10 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 * {
   /* border: solid 1px; */
   /*  都確認好就可以註解掉  */
-  font-family: 微軟正黑體;
+  font-family: 'Noto Sans TC';
   color: #333333;
   position: relative;
   font-size: 15pt;
@@ -50,7 +52,6 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
-  font-family: 微軟正黑體;
   font-size: 18pt;
   letter-spacing: 1px;
 }
