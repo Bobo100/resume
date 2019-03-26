@@ -1,31 +1,48 @@
+$color_blue: #333333;
+$color_green: #669999;
+$color_white: #cccccc;
+
+$font_size: 10pt;
+
 * {
   border: solid 1px;
   /*  都確認好就可以註解掉  */
   font-family: 微軟正黑體;
+  color: $color_blue;
   position: relative;
+  font-size: $font_size*1.5;
 }
 
-html, body {
-  /*   display: flex; */
-  /*   justify-content: center; */
+html,
+body {
+  display: flex;
+  justify-content: center;
   padding: 0px;
   margin: 0px;
 }
 
 .resume {
-  /*   display: flex; */
+  display: flex;
+  width: 1280px;
   max-width: 1280px;
   /*   height: 100%;
   weight: 100%; */
-  /*   position: relative; */
+  position: relative;
+  flex-direction: column;
   margin: 0 auto;
   border: solid;
 }
 
-.menu {
-  height: 100%;
-  margin: 0 auto;
+.titile_h1 {
+  padding-left: 10px;
+  font-size: 24pt;
+  color: #669999;
 }
+
+p {
+  padding-left: 40px;
+}
+
 .menu ul {
   padding: 0;
   display: flex;
@@ -33,7 +50,8 @@ html, body {
 }
 
 .menu li {
-  display: inline-block;
+  display: inline-flex;
+  // display: inline-block;
   /*   inline inline-block有差別喔 */
 
   padding-left: 15px;
@@ -46,77 +64,41 @@ html, body {
 }
 
 .about {
-  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.about1,
-.about2 {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-  vertical-align: top;
+.about1, .about2 {
+  flex: 1;
 }
 
 .about1 {
-  background-color: #333333;
+  background-color: $color_blue;
 }
 
-.titile_h1 {
-  /*   margin-top: 25px; */
-  padding-top: 25px;
-  padding-left: 60px;
-  margin-top: 0px;
-  font-size: 24pt;
-  color: #669999;
-}
-
-.about p {
-  padding-left: 60px;
-  font-size: 15pt;
-  letter-spacing: 1px;
-  color: #cccccc;
-}
-
-.education {
-  height: 200px;
-  background-color: #ffffff;
-}
-.education div {
-  padding-left: 60px;
-  padding-top: 25px;
-  font-size: 15pt;
-  color: #333333;
+.about1 p {
+  color: $color_white;
 }
 
 .ability {
-  height: 100%;
   background-color: #333333;
 }
 
-.ability h1 {
-}
-
 .ability ul {
-  padding: 0;
-  margin-bottom: 20px;
+  // display: inline-flex;
 }
 .ability li {
-  box-sizing: border-box;
   list-style-type: none;
-
-  color: #cccccc;
-  font-size: 15pt;
   padding-top: 10px;
-  padding-left: 60px;
-  align-items: center;
+  
 }
 .skill {
-  display: inline-block;
-  width: 10%;
+  display: inline-flex;
+  color: $color_white;
+  width: 150px;
 }
 .bar {
-  display: inline-block;
+  display: inline-flex;
   border: solid 1px #cccccc;
   width: 100px;
   height: 15px;
@@ -124,41 +106,19 @@ html, body {
 .bar.v1 {
   background-color: #ffffff;
 }
-.skill_text {
-}
-.skill_div {
-  width: 100%;
-}
+
 .text {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: flex-end;
   width: 100px;
-  text-align: right;
+  color: $color_white;
 }
 
-.certificate {
-  height: 100%;
-  margin-bottom: 20px;
+
+.education {
+  
 }
+
 .certificate ul {
-  padding-left: 60px;
   list-style-type: none;
-  font-size: 15pt;
-}
-
-.certificate li {
-}
-
-.work_experience {
-  height: 200px;
-  background-color: #333333;
-}
-
-.work_experience div {
-  padding-left: 60px;
-  padding-top: 25px;
-  font-size: 15pt;
-  color: #cccccc;
-}
-
-.collection {
 }
