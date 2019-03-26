@@ -1,16 +1,11 @@
-$color_blue: #333333;
-$color_green: #669999;
-$color_white: #cccccc;
-
-$font_size: 10pt;
-
+@charset "UTF-8";
 * {
   border: solid 1px;
   /*  都確認好就可以註解掉  */
   font-family: 微軟正黑體;
-  color: $color_blue;
+  color: #333333;
   position: relative;
-  font-size: $font_size*1.5;
+  font-size: 15pt;
 }
 
 html,
@@ -51,13 +46,10 @@ p {
 
 .menu li {
   display: inline-flex;
-  // display: inline-block;
   /*   inline inline-block有差別喔 */
-
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
-
   font-family: 微軟正黑體;
   font-size: 18pt;
   letter-spacing: 1px;
@@ -73,36 +65,35 @@ p {
 }
 
 .about1 {
-  background-color: $color_blue;
+  background-color: #333333;
 }
 
 .about1 p {
-  color: $color_white;
+  color: #cccccc;
 }
 
 .ability {
   background-color: #333333;
 }
 
-.ability ul {
-  // display: inline-flex;
-}
 .ability li {
   list-style-type: none;
   padding-top: 10px;
-  
 }
+
 .skill {
   display: inline-flex;
-  color: $color_white;
+  color: #cccccc;
   width: 150px;
 }
+
 .bar {
   display: inline-flex;
   border: solid 1px #cccccc;
   width: 100px;
   height: 15px;
 }
+
 .bar.v1 {
   background-color: #ffffff;
 }
@@ -111,12 +102,7 @@ p {
   display: inline-flex;
   justify-content: flex-end;
   width: 100px;
-  color: $color_white;
-}
-
-
-.education {
-  
+  color: #cccccc;
 }
 
 .certificate ul {
