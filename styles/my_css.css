@@ -53,3 +53,11 @@ body, #slider, .wrap, .slide-content{
     right: 0;
     margin-right: 30px;
 }
+.dots {
+    width: 5px;
+    height: 5px;
+    display: inline-flex;
+    background: grey;
+    padding: 5px;
+    border-radius: 50%;
+}

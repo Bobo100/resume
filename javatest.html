@@ -28,6 +28,11 @@
             </div>
         </div>
         <div id="arrow-right" class="arrow"></div>
+            <div style="text-align: center;">
+                <span class="dots" onclick="currentSlide(1)"></span>
+                <span class="dots" onclick="currentSlide(2)"></span>
+                <span class="dots" onclick="currentSlide(3)"></span>
+            </div>
     </div>
 
     <script>
@@ -80,6 +85,11 @@
         });
 
         startSlide();
+
+        function currentSlide(n){
+            reset();
+            sliderImages[n - 1].style.display = "block";
+        }
     </script>
 </body>
 </html>
