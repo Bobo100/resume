@@ -15,8 +15,8 @@ body, #slider, .wrap, .slide-content{
 }
 
 .slide1{background-image: url('../images/images01.jpg')}
-.slide2{background-image: url('../images/images01.jpg')}
-.slide3{background-image: url('../images/images01.jpg')}
+.slide2{background-image: url('../images/images02.jpg')}
+.slide3{background-image: url('../images/images03.jpg')}
 
 .slide-content{
     display: flex;
