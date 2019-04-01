@@ -33,7 +33,7 @@
 
         //Counter
         let counter = 1;
-        const size = carouselImages[0].clientWidth;
+        const size = carouselImages[1].clientWidth;
 
         //永遠只會移動一張圖片的寬度
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -62,8 +62,7 @@
             if(carouselImages[counter].id === 'firstClone'){
                 carouselSlide.style.transition = "none";
                 counter = carouselImages.length - counter;
-                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-                
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';   
             }
         });
 

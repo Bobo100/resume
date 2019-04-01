@@ -1,0 +1,31 @@
+.block1 {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: solid 2px black;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.block1:hover .block2 {
+  background-color: red;
+}
+
+.block1:hover .block3 {
+  background-color: blue;
+  width: 150px;
+}
+
+.block1:active {
+  background-color: black;
+}
+
+.block2, .block3 {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: solid 2px black;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+/*# sourceMappingURL=test3.css.map */

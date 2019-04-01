@@ -1,0 +1,52 @@
+* {
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body, html {
+  background-color: #333;
+}
+
+div {
+  border: solid 2px black;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  background-color: transparent;
+}
+
+div:before {
+  content: attr(data-size) "-";
+}
+
+div:after {
+  content: attr(data-color);
+}
+
+[data-size="small"] {
+  width: 150px;
+  height: 50px;
+}
+
+[data-size="medium"] {
+  width: 250px;
+  height: 70px;
+}
+
+[data-size="large"] {
+  width: 350px;
+  height: 90px;
+}
+
+[data-color="red"] {
+  border-color: #FC216E;
+}
+
+[data-color="blue"] {
+  border-color: #216EFC;
+}
+
+[data-color="green"] {
+  border-color: #27C42D;
+}
+/*# sourceMappingURL=test.css.map */

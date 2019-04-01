@@ -1,0 +1,52 @@
+* {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body,html {
+    background-color: #333;
+}
+
+@mixin size($w, $h){
+    width: $w;
+    height: $h;   
+}
+
+div {
+    border: solid 2px black;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    background-color: transparent;
+
+    &:before {
+        content: attr(data-size) "-"
+    }
+    &:after {
+        content: attr(data-color)
+    }
+}
+
+[data-size="small"] {
+    @include size(150px,50px);
+}
+
+[data-size="medium"] {
+    @include size(250px,70px);
+}
+
+[data-size="large"] {
+    @include size(350px,90px);
+}
+
+[data-color="red"] {
+    border-color: #FC216E;
+}
+
+[data-color="blue"] {
+    border-color: #216EFC;
+}
+
+[data-color="green"] {
+    border-color: #27C42D;
+}

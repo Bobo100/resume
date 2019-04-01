@@ -1,0 +1,108 @@
+* {
+    background-color: #333;
+}
+
+.block {
+    border: solid 2px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    font-family: Microsoft JhengHei;
+
+    &:hover h1, &:hover p{
+        opacity: 1;
+    }
+
+    & h1, p {
+        opacity: 0;
+        transition-duration: 0.5s; //變化時間 持續時間
+    }
+    & p {
+        transition-delay: 0.5s; //延遲0.5秒 
+    }
+}
+
+.cross {
+    // border: solid 2px;
+    width: 200px;
+    height: 200px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+    background-color: aqua;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    & .line1, & .line2 {
+        width: 150px;
+        height: 10px;
+        // border: solid 2px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition-duration: 0.5s;
+    }
+    & .line1 {
+        transform: translateX(-50%) translateY(-100%) scaleX(1.2);
+    }
+    & .line2 {
+        transform: translateX(-50%) translateY(100%) scaleX(1.2);
+    }
+
+    &:hover {
+        background-color: aquamarine;
+    }
+    &:hover .line1, &:hover .line2 {
+        width: 170px;
+    }
+    &:hover .line1 {
+        transform: translateX(-50%) translateY(-50%) rotate(45deg); 
+    }
+    
+    &:hover .line2 {
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+}
+
+.cross1 {
+    // border: solid 2px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCDF1E;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    & .line3, & .line4 {
+        width: 150px;
+        height: 10px;
+        // border: solid 2px;
+        background-color: white;
+        transition-duration: 0.5s;
+    }
+    & .line3 {
+        transform:  translateY(-100%) scaleX(1.2);
+    }
+    & .line4 {
+        transform:  translateY(100%) scaleX(1.2);
+    }
+
+    &:hover {
+        background-color: #FC5D1E;
+    }
+    &:hover .line3, &:hover .line4 {
+        width: 170px;
+    }
+    &:hover .line3 {
+        transform: translateY(50%) rotate(45deg);
+    }
+    &:hover .line4 {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+}

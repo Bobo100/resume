@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+    // border: solid 2px;
+    font-family: 'Noto Sans TC';
+    position: relative;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+body, html{
+    @include size(100%, 100%);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.phone {
+    width: 240px;
+    border: solid 1px #888;
+    border-radius: 6px;
+}
+
+.top {
+    @include size(100%, 150px);
+    background-image: url("../images/image03.png");
+    background-size: cover;
+    background-position: center;
+}
+.bottom {
+    @include size(100%, 200px);
+    background-color: white;
+}
+
+.headpic {
+    @include size(80px, 80px);
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-image: url("../images/images02.jpg");
+    background-size: cover ;//剛好塞滿的意思
+    border: solid 2px white;
+}
+
+.name {
+    right: -100px;
+    top: 10px;
+    color: white;
+    letter-spacing: 2px;
+}
