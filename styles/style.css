@@ -102,6 +102,18 @@ body {
   color: #cccccc;
 }
 
+.resume .education {
+  height: 200px;
+}
+
+.resume .education .p_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .resume .ability {
   background-color: #333333;
 }
