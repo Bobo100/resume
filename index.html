@@ -8,42 +8,67 @@
   <link rel="stylesheet" type="text/css" href="styles/style.css">
   <link rel="shortcut icon" href="pictures/favicon.ico" />
   <link rel="bookmark" href="pictures/favicon.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
   <div class="resume">
     <nav class="menu">
       <ul>
-        <li>關於我</li>
-        <li>學歷</li>
-        <li>專業能力</li>
-        <li>相關證明</li>
-        <li>工作經驗</li>
-        <li>作品集</li>
-        <li>聯絡我</li>
+        <li class="scroll">
+          <a class="scroll" href="#about">關於我</a>
+        </li>
+        <li class="scroll">
+          <a class="scroll" href="#education">學歷</a>
+        </li>
+        <li class="scroll">
+          <a class="scroll" href="#ability">專業能力</a>
+        </li>
+        <li class="scroll">
+          <a class="scroll" href="#certificate">相關證明</a>
+        </li>
+        <li class="scroll">
+          <a class="scroll" href="#work_experience">工作經驗</a>
+        </li>
+        <li class="scroll">
+          <a class="scroll" href="#collection">作品集</a>
+        </li>
+        <li>
+          <a class="scroll" href="#content">聯絡我</a>
+        </li>
       </ul>
     </nav>
-    <div class="about">
+    <div class="about" id="about">
       <div class="about1">
-        <h1 class="titile_h1">關於我</h1>
-        <p> 熱愛遊戲到沉溺遊戲
-          <br>擁有作家拖延症候群
-          <br>充滿新世代無力感
-          <br>好奇世界的運作
-        </p>
+        <h1 class="titile_h1">關於我
+          <svg viewbox="0 0 100 10">
+            <line x1=00 y1=0 x2=100 y2=0></line>
+          </svg>
+        </h1>
+        <div class="p_center">
+          <p>熱愛遊戲到沉溺遊戲
+            <br>擁有作家拖延症候群
+            <br>充滿新世代無力感
+            <br>好奇世界的運作
+          </p>
+        </div>
       </div>
       <div class="about2">
         <p>放圖片</p>
       </div>
     </div>
-    <div class="education">
+    <div class="education" id="education">
       <h1 class="titile_h1">學歷</h1>
       <div class="p_center">
-          <p>白紙的社會新鮮人，可以被任何的風格給塑造</p>
+        <p>白紙的社會新鮮人，可以被任何的風格給塑造</p>
       </div>
     </div>
-    <div class="ability">
-      <h1 class="titile_h1">專業能力</h1>
+    <div class="ability" id="ability">
+      <h1 class="titile_h1">專業能力
+        <svg viewbox="0 0 130 10">
+          <line x1=00 y1=0 x2=130 y2=0></line>
+        </svg>
+      </h1>
       <ul>
         <li>
           <div class="skill">SQL</div>
@@ -99,7 +124,7 @@
       </ul>
     </div>
 
-    <div class="certificate">
+    <div class="certificate" id="certificate">
       <h1 class="titile_h1">相關證明</h1>
       <ul>證照
         <li>
@@ -129,14 +154,14 @@
         </li>
       </ul>
     </div>
-    <div class="work_experience">
+    <div class="work_experience" id="work_experience">
       <h1 class="titile_h1">工作經驗</h1>
       <p>白紙的社會新鮮人，可以被任何的風格給塑造</p>
     </div>
-    <div class="collection">
+    <div class="collection" id="collection">
       <h1 class="titile_h1">作品集</h1>
     </div>
-    <div class="content">
+    <div class="content" id="content">
       <h1 class="titile_h1">聯絡我</h1>
     </div>
   </div>
@@ -151,7 +176,25 @@
         bodyClass.remove('hideUp');
       } else {
         bodyClass.add('hideUp');
+        // $('.menu').css("opacity", "1");
       }
       lastScrollY = st;
-    });
+    })
+
+    // $("#content").click(function () {
+    //   $('html,body').animate({scrollTop: $('.content').offset().top}, 2000); 
+    //   console.log("test");
+    //     });
+    $(document).ready(function () {
+
+      var scrollLink = $('.scroll');
+
+      // Smooth scrolling
+      scrollLink.click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    })
   </script>

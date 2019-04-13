@@ -37,10 +37,25 @@ body {
   padding-left: 10px;
   font-size: 24pt;
   color: #669999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .resume p {
   padding-left: 40px;
+}
+
+.resume .p_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .resume .menu {
@@ -57,6 +72,7 @@ body {
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   background-color: white;
+  opacity: 1;
 }
 
 .resume .menu ul {
@@ -70,15 +86,23 @@ body {
 
 .resume .menu ul li {
   padding-top: 10px;
-  font-size: 18pt;
-  letter-spacing: 1px;
   list-style-type: none;
 }
 
+.resume .menu ul li a {
+  font-size: 18pt;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.resume .menu ul:hover {
+  cursor: pointer;
+}
+
 .resume .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -86,12 +110,24 @@ body {
   margin-top: 80px;
 }
 
+.resume .about svg {
+  width: 100px;
+  height: 10px;
+  -webkit-animation: appear 2s ease-in-out;
+          animation: appear 2s ease-in-out;
+}
+
+.resume .about svg line {
+  stroke-width: 3px;
+  stroke: white;
+}
+
 .resume .about .about1,
 .resume .about .about2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 250px;
+  height: 280px;
 }
 
 .resume .about .about1 {
@@ -106,16 +142,40 @@ body {
   height: 200px;
 }
 
-.resume .education .p_center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
 .resume .ability {
   background-color: #333333;
+}
+
+.resume .ability svg {
+  width: 130px;
+  height: 10px;
+  -webkit-animation: appear 2s ease-in-out;
+          animation: appear 2s ease-in-out;
+}
+
+.resume .ability svg line {
+  stroke-width: 3px;
+  stroke: white;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .resume .ability li {
