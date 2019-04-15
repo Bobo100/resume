@@ -71,6 +71,9 @@ body {
           font-size: 18pt;
           letter-spacing: 1px;
           text-decoration: none;
+
+          &:hover {
+          }
         }
       }
 
@@ -91,7 +94,7 @@ body {
       height: 10px;
       line {
         stroke-width: 3px;
-        stroke: white; 
+        stroke: white;
       }
       animation: appear 2s ease-in-out;
     }
@@ -107,10 +110,73 @@ body {
         color: #cccccc;
       }
     }
+    .about2 {
+      display: flex;
+      justify-content: center;
+
+      img {
+        position: absolute;
+        width: 540px;
+        z-index: 1;
+        // use animate
+        // animation: z-index 4s ease-out;
+      }
+
+      // @keyframes z-index {
+      //   0% {
+      //     opacity: 0;
+      //     z-index: 0;
+      //   }
+      //   100% {
+      //     opacity: 1;
+      //     z-index: 1;
+      //   }
+      // }
+    }
   }
 
   .education {
-    height: 200px;
+    .education_svg {
+      width: 100px;
+      height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: #333333;
+      }
+      animation: appear 2s ease-in-out;
+    }
+    .separate {
+      .svg {
+        // display: flex;
+        width: 540px;
+        height: 150px;
+        circle {
+          stroke: black;
+          stroke-width: 0.3;
+          fill: none;
+        }
+        line {
+          stroke: black;
+          stroke-width: 0.3;
+        }
+        text {
+          font-size: 2.5pt;
+        }
+        .main_text {
+          font-size: 3pt;
+        }
+        .text_color {
+          fill: red;
+        }
+
+        @keyframes fadeout {
+          0% {
+          }
+          100% {
+          }
+        }
+      }
+    }
   }
 
   .ability {
@@ -168,12 +234,26 @@ body {
   }
 
   .certificate {
+    svg {
+      width: 130px;
+      height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: #333333;
+      }
+      animation: appear 2s ease-in-out;
+    }
     ul {
       list-style-type: none;
     }
   }
 
   .work_experience {
+    height: 200px;
+    background-color: #333333;
+    p {
+      color: #cccccc;
+    }
   }
   .collection {
     height: 300px;

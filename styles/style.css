@@ -138,8 +138,73 @@ body {
   color: #cccccc;
 }
 
-.resume .education {
-  height: 200px;
+.resume .about .about2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.resume .about .about2 img {
+  position: absolute;
+  width: 540px;
+  z-index: 1;
+}
+
+.resume .education .education_svg {
+  width: 100px;
+  height: 10px;
+  -webkit-animation: appear 2s ease-in-out;
+          animation: appear 2s ease-in-out;
+}
+
+.resume .education .education_svg line {
+  stroke-width: 3px;
+  stroke: #333333;
+}
+
+.resume .education .separate .svg {
+  width: 540px;
+  height: 150px;
+}
+
+.resume .education .separate .svg circle {
+  stroke: black;
+  stroke-width: 0.3;
+  fill: none;
+}
+
+.resume .education .separate .svg line {
+  stroke: black;
+  stroke-width: 0.3;
+}
+
+.resume .education .separate .svg text {
+  font-size: 2.5pt;
+}
+
+.resume .education .separate .svg .main_text {
+  font-size: 3pt;
+}
+
+.resume .education .separate .svg .text_color {
+  fill: red;
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+  }
+  100% {
+  }
+}
+
+@keyframes fadeout {
+  0% {
+  }
+  100% {
+  }
 }
 
 .resume .ability {
@@ -226,8 +291,29 @@ body {
   list-style-type: none;
 }
 
+.resume .certificate svg {
+  width: 130px;
+  height: 10px;
+  -webkit-animation: appear 2s ease-in-out;
+          animation: appear 2s ease-in-out;
+}
+
+.resume .certificate svg line {
+  stroke-width: 3px;
+  stroke: #333333;
+}
+
 .resume .certificate ul {
   list-style-type: none;
+}
+
+.resume .work_experience {
+  height: 200px;
+  background-color: #333333;
+}
+
+.resume .work_experience p {
+  color: #cccccc;
 }
 
 .resume .collection {
