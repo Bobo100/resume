@@ -1,4 +1,597 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* 超過 768px */
+@media screen and (min-width: 1280px) {
+  * {
+    position: relative;
+    font-family: "Noto Sans TC";
+    color: #333333;
+    font-size: 15pt;
+  }
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .resume {
+    width: 50%;
+    max-width: 1280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+    border: solid;
+  }
+  .resume .titile_h1 {
+    padding-left: 10px;
+    font-size: 24pt;
+    color: #669999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resume p {
+    padding-left: 40px;
+  }
+  .resume .p_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .resume .menu {
+    position: fixed;
+    width: 50%;
+    max-width: 1280px;
+    height: 80px;
+    top: 0;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: top 0.4s ease-in-out;
+    transition: top 0.4s ease-in-out;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    opacity: 1;
+  }
+  .resume .menu ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .resume .menu ul li {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+  }
+  .resume .menu ul li a {
+    font-size: 1.063rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .resume .menu ul:hover {
+    cursor: pointer;
+  }
+  .resume .about {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 80px;
+  }
+  .resume .about svg {
+    width: 100px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .about svg line {
+    stroke-width: 3px;
+    stroke: white;
+  }
+  .resume .about .about1,
+  .resume .about .about2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 280px;
+  }
+  .resume .about .about1 {
+    background-color: #333333;
+  }
+  .resume .about .about1 p {
+    color: #cccccc;
+  }
+  .resume .about .about2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .resume .about .about2 img {
+    position: absolute;
+    width: 540px;
+    z-index: 1;
+    max-width: 100%;
+  }
+  .resume .education .education_svg {
+    width: 100px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .education .education_svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .resume .education .separate .svg {
+    width: 540px;
+    height: 150px;
+  }
+  .resume .education .separate .svg circle {
+    stroke: black;
+    stroke-width: 0.3;
+    fill: none;
+  }
+  .resume .education .separate .svg line {
+    stroke: black;
+    stroke-width: 0.3;
+  }
+  .resume .education .separate .svg text {
+    font-size: 2.5pt;
+  }
+  .resume .education .separate .svg .main_text {
+    font-size: 3pt;
+  }
+  .resume .education .separate .svg .text_color {
+    fill: red;
+  }
+  @-webkit-keyframes fadeout {
+    0% {
+    }
+    100% {
+    }
+  }
+  @keyframes fadeout {
+    0% {
+    }
+    100% {
+    }
+  }
+  .resume .ability {
+    background-color: #333333;
+  }
+  .resume .ability svg {
+    width: 130px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .ability svg line {
+    stroke-width: 3px;
+    stroke: white;
+  }
+  @-webkit-keyframes appear {
+    0% {
+      width: 0px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      width: 0px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .resume .ability li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    padding-top: 10px;
+  }
+  .resume .ability li .skill {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #cccccc;
+    width: 150px;
+  }
+  .resume .ability li .bar {
+    border: solid 1px #cccccc;
+    width: 100px;
+    height: 15px;
+  }
+  .resume .ability li .bar.v1 {
+    background-color: #ffffff;
+  }
+  .resume .ability li .text {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100px;
+    color: #cccccc;
+  }
+  .resume .ability li .certificate ul {
+    list-style-type: none;
+  }
+  .resume .certificate {
+    height: 650px;
+  }
+  .resume .certificate svg {
+    width: 130px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .certificate svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .resume .certificate ul {
+    list-style-type: none;
+  }
+  .resume .work_experience {
+    height: 200px;
+    background-color: #333333;
+  }
+  .resume .work_experience p {
+    color: #cccccc;
+  }
+  .resume .collection {
+    height: 300px;
+  }
+  .resume .content {
+    height: 200px;
+  }
+  .hideUp .menu {
+    top: -80px;
+  }
+}
+
+/* 介於 768px 與 1280px 之間 */
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  * {
+    position: relative;
+    font-family: "Noto Sans TC";
+    color: #333333;
+    font-size: 15pt;
+  }
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .resume {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 50px;
+    border: solid;
+  }
+  .resume .titile_h1 {
+    padding-left: 10px;
+    font-size: 24pt;
+    color: #669999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resume p {
+    padding-left: 40px;
+  }
+  .resume .p_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .resume .menu {
+    position: fixed;
+    width: 50%;
+    height: 80px;
+    top: 0;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: top 0.4s ease-in-out;
+    transition: top 0.4s ease-in-out;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    opacity: 1;
+  }
+  .resume .menu ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .resume .menu ul li {
+    padding-top: 10px;
+    list-style-type: none;
+  }
+  .resume .menu ul li a {
+    font-size: 0.813rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .resume .menu ul:hover {
+    cursor: pointer;
+  }
+  .resume .about {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 80px;
+  }
+  .resume .about svg {
+    width: 100px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .about svg line {
+    stroke-width: 3px;
+    stroke: white;
+  }
+  .resume .about .about1,
+  .resume .about .about2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 280px;
+  }
+  .resume .about .about1 {
+    background-color: #333333;
+  }
+  .resume .about .about1 p {
+    color: #cccccc;
+  }
+  .resume .about .about2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .resume .about .about2 img {
+    position: absolute;
+    width: 540px;
+    z-index: 1;
+    max-width: 100%;
+  }
+  .resume .education .education_svg {
+    width: 100px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .education .education_svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .resume .education .separate .svg {
+    width: 540px;
+    height: 150px;
+  }
+  .resume .education .separate .svg circle {
+    stroke: black;
+    stroke-width: 0.3;
+    fill: none;
+  }
+  .resume .education .separate .svg line {
+    stroke: black;
+    stroke-width: 0.3;
+  }
+  .resume .education .separate .svg text {
+    font-size: 2.5pt;
+  }
+  .resume .education .separate .svg .main_text {
+    font-size: 3pt;
+  }
+  .resume .education .separate .svg .text_color {
+    fill: red;
+  }
+  @-webkit-keyframes fadeout {
+    0% {
+    }
+    100% {
+    }
+  }
+  @keyframes fadeout {
+    0% {
+    }
+    100% {
+    }
+  }
+  .resume .ability {
+    background-color: #333333;
+  }
+  .resume .ability svg {
+    width: 130px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .ability svg line {
+    stroke-width: 3px;
+    stroke: white;
+  }
+  @-webkit-keyframes appear {
+    0% {
+      width: 0px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      width: 0px;
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .resume .ability li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style-type: none;
+    padding-top: 10px;
+  }
+  .resume .ability li .skill {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #cccccc;
+    width: 150px;
+  }
+  .resume .ability li .bar {
+    border: solid 1px #cccccc;
+    width: 100px;
+    height: 15px;
+  }
+  .resume .ability li .bar.v1 {
+    background-color: #ffffff;
+  }
+  .resume .ability li .text {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100px;
+    color: #cccccc;
+  }
+  .resume .ability li .certificate ul {
+    list-style-type: none;
+  }
+  .resume .certificate {
+    height: 650px;
+  }
+  .resume .certificate svg {
+    width: 130px;
+    height: 10px;
+    -webkit-animation: appear 2s ease-in-out;
+            animation: appear 2s ease-in-out;
+  }
+  .resume .certificate svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .resume .certificate ul {
+    list-style-type: none;
+  }
+  .resume .work_experience {
+    height: 200px;
+    background-color: #333333;
+  }
+  .resume .work_experience p {
+    color: #cccccc;
+  }
+  .resume .collection {
+    height: 300px;
+  }
+  .resume .content {
+    height: 200px;
+  }
+  .hideUp .menu {
+    top: -80px;
+  }
+}
+
+/* 介於 480px 與 767px 之間 */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  img {
+    display: none;
+  }
+}
+
+/* 未滿 480px，即 479px 以下 */
+@media screen and (max-width: 479px) {
+  img {
+    display: none;
+  }
+}
+
 * {
   position: relative;
   font-family: "Noto Sans TC";
@@ -86,11 +679,13 @@ body {
 
 .resume .menu ul li {
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   list-style-type: none;
 }
 
 .resume .menu ul li a {
-  font-size: 18pt;
+  font-size: 1.063rem;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -151,6 +746,7 @@ body {
   position: absolute;
   width: 540px;
   z-index: 1;
+  max-width: 100%;
 }
 
 .resume .education .education_svg {
@@ -289,6 +885,10 @@ body {
 
 .resume .ability li .certificate ul {
   list-style-type: none;
+}
+
+.resume .certificate {
+  height: 650px;
 }
 
 .resume .certificate svg {

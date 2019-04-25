@@ -9,12 +9,13 @@
   <link rel="shortcut icon" href="pictures/favicon.ico" />
   <link rel="bookmark" href="pictures/favicon.ico" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 </head>
 
 <body>
   <div class="resume">
-    <nav class="menu">
-      <ul>
+    <div id="Menu" class="menu">
+      <ul id="nav">
         <li class="scroll">
           <a class="scroll" href="#about">關於我</a>
         </li>
@@ -37,7 +38,7 @@
           <a class="scroll" href="#content">聯絡我</a>
         </li>
       </ul>
-    </nav>
+    </div>
     <div class="about" id="about">
       <div class="about1">
         <h1 class="titile_h1">關於我
@@ -218,6 +219,22 @@
         $('body,html').animate({
           scrollTop: $(this.hash).offset().top
         }, 1000);
+        // 在href放入id選擇器，this.hash取出href值
       });
     })
+    $(function () {
+      var nav = $('#nav');
+      var win = $(window);
+      $('#menu').on('click', function (e) {
+        e.preventDefault();
+        nav.slideToggle();
+      });
+
+      win.resize(function () {
+        if (win.width() > 480 && nav.is(':hidden')) {
+          nav.removeAttr('style');
+        }
+      });
+    });
   </script>
+</body>

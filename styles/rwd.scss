@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  * {
+    position: relative;
+    font-family: "Noto Sans TC";
+    color: #333333;
+    font-size: 15pt;
+    border: solid 1px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  .resume {
+    width: 50%;
+    max-width: 768px;
+
+    .titile_h1 {
+      padding-left: 20px;
+      padding-top: 20px;
+      font-size: 24pt;
+      color: #669999;
+    }
+    p {
+      padding-left: 50px;
+    }
+  }
+
+  .about {
+    display: flex;
+    h1 {
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      width: 100px;
+      // height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: white;
+      }
+      // animation: appear 2s ease-in-out;
+    }
+    .about1,
+    .about2 {
+      width: 50%;
+      // height: 200px;
+    }
+    .about1 {
+      background-color: #333333;
+      p {
+        color: #cccccc;
+      }
+    }
+  }
+  .education {
+    h1 {
+      display: flex;
+      flex-direction: column;
+    }
+    .education_svg {
+      width: 95px;
+      // height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: #333333;
+      }
+      // animation: appear 2s ease-in-out;
+    }
+    .separate {
+      .svg {
+        // display: flex;
+        width: 540px;
+        height: 150px;
+        circle {
+          stroke: black;
+          stroke-width: 0.3;
+          fill: none;
+        }
+        line {
+          stroke: black;
+          stroke-width: 0.3;
+        }
+        text {
+          font-size: 2.5pt;
+        }
+        .main_text {
+          font-size: 3pt;
+        }
+        .text_color {
+          fill: red;
+        }
+      }
+    }
+  }
+  .ability {
+    background-color: #333333;
+    height: 450px;
+    // padding-top: 80px;
+    h1 {
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      width: 130px;
+      // height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: white;
+      }
+      // animation: appear 2s ease-in-out;
+    }
+
+    ul {
+      padding-right: 20px;
+      li {
+        // display: flex;
+        // flex-direction: row;
+        list-style-type: none;
+
+        .skill {
+          color: #cccccc;
+        }
+        .progress {
+          background-color: #cccccc;
+          .progress-bar {
+            background-color: #ffffff;
+            opacity: 0;
+            border: solid 1px #cccccc;
+            // animation: fade 2s linear;
+          }
+          .stock {
+            animation: fade 2s ease-in-out forwards;
+            z-index: 4;
+          }
+          .stock2 {
+            animation-delay: 1.5s;
+            z-index: 3;
+          }
+          .stock3 {
+            animation-delay: 3s;
+            z-index: 2;
+          }
+          .stock4 {
+            animation-delay: 4.5s;
+            z-index: 1;
+          }
+
+          @keyframes fade {
+            0% {
+              opacity: 0;
+              transform: translateX(-300px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateX(0px);
+            }
+          }
+          .v1 {
+            background-color: #333333;
+          }
+        } //progress
+        .text_skill {
+          display: flex;
+        }
+        .skill_text {
+          color: #cccccc;
+          width: 25%;
+          // display: inline-flex;
+        }
+      } //li
+    } //ul
+  }
+  .certificate {
+    h1 {
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      width: 130px;
+      // height: 10px;
+      line {
+        stroke-width: 3px;
+        stroke: #333333;
+      }
+      // animation: appear 2s ease-in-out;
+    }
+    ul {
+      padding-left: 50px; 
+      li {
+        padding-left: 40px;
+        padding-top: 20px;
+        list-style-type: none;
+        blockquote {
+        }
+      }
+    }
+  }
+  .collection {
+  }
+
+  // .menu {
+  //   width: 50%;
+  //   max-width: 1280px;
+  // }
+}
