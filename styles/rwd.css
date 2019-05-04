@@ -5,7 +5,6 @@
     font-family: "Noto Sans TC";
     color: #333333;
     font-size: 15pt;
-    border: solid 1px;
   }
   html,
   body {
@@ -21,7 +20,7 @@
     scroll-behavior: smooth;
   }
   body {
-    padding-top: 70px;
+    padding-top: 59px;
   }
   .resume {
     width: 50%;
@@ -35,6 +34,40 @@
   }
   .resume p {
     padding-left: 50px;
+  }
+  .menu {
+    position: fixed;
+    width: 50%;
+    max-width: 768px;
+    top: 0;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-color: white;
+  }
+  .menu ul {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu ul li {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+  }
+  .menu ul li a {
+    color: #333333;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .menu ul:hover {
+    cursor: pointer;
   }
   .about {
     display: -webkit-box;
@@ -51,6 +84,7 @@
             flex-direction: column;
   }
   .about svg {
+    visibility: hidden;
     width: 100px;
   }
   .about svg line {
@@ -77,6 +111,7 @@
             flex-direction: column;
   }
   .education .education_svg {
+    visibility: hidden;
     width: 95px;
   }
   .education .education_svg line {
@@ -91,6 +126,19 @@
     stroke: black;
     stroke-width: 0.3;
     fill: none;
+    stroke-dasharray: 0 20;
+    -webkit-animation: circle 3s linear forwards;
+            animation: circle 3s linear forwards;
+  }
+  @-webkit-keyframes circle {
+    100% {
+      stroke-dasharray: 20;
+    }
+  }
+  @keyframes circle {
+    100% {
+      stroke-dasharray: 20;
+    }
   }
   .education .separate .svg line {
     stroke: black;
@@ -119,6 +167,7 @@
             flex-direction: column;
   }
   .ability svg {
+    visibility: hidden;
     width: 130px;
   }
   .ability svg line {
@@ -143,8 +192,6 @@
     border: solid 1px #cccccc;
   }
   .ability ul li .progress .stock {
-    -webkit-animation: fade 2s ease-in-out forwards;
-            animation: fade 2s ease-in-out forwards;
     z-index: 4;
   }
   .ability ul li .progress .stock2 {
@@ -161,30 +208,6 @@
     -webkit-animation-delay: 4.5s;
             animation-delay: 4.5s;
     z-index: 1;
-  }
-  @-webkit-keyframes fade {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-300px);
-              transform: translateX(-300px);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
-  }
-  @keyframes fade {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-300px);
-              transform: translateX(-300px);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
   }
   .ability ul li .progress .v1 {
     background-color: #333333;
@@ -208,6 +231,7 @@
             flex-direction: column;
   }
   .certificate svg {
+    visibility: hidden;
     width: 130px;
   }
   .certificate svg line {
@@ -222,5 +246,112 @@
     padding-top: 20px;
     list-style-type: none;
   }
+  .experience h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .experience svg {
+    visibility: hidden;
+    width: 130px;
+  }
+  .experience svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .collection h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .collection svg {
+    visibility: hidden;
+    width: 100px;
+  }
+  .collection svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+  .content h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content svg {
+    visibility: hidden;
+    width: 100px;
+  }
+  .content svg line {
+    stroke-width: 3px;
+    stroke: #333333;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.add_fade {
+  -webkit-animation: fade 2s ease-in-out forwards;
+          animation: fade 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    stroke-dasharray: 260;
+    stroke-dashoffset: 260;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes appear {
+  0% {
+    stroke-dasharray: 260;
+    stroke-dashoffset: 260;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.add_keyframe {
+  -webkit-animation: appear 3s ease-in-out forwards;
+          animation: appear 3s ease-in-out forwards;
 }
 /*# sourceMappingURL=rwd.css.map */

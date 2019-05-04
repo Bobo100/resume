@@ -16,8 +16,8 @@
 
 <body>
     <div class="resume">
-        <div class="container">
-            <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- <div class="container bar_container">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#about">關於我</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +35,9 @@
                             <a class="nav-link" href="#certificate">相關證明</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#experience">工作經驗</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#collection">作品集</a>
                         </li>
                         <li class="nav-item">
@@ -43,12 +46,37 @@
                     </ul>
                 </div>
             </nav>
+        </div> -->
+        <div id="Menu" class="menu">
+            <ul id="nav">
+                <li>
+                    <a class="about_bar" href="#about">關於我</a>
+                </li>
+                <li>
+                    <a class="education_bar" href="#education">學歷</a>
+                </li>
+                <li>
+                    <a class="ability_bar" href="#ability">專業能力</a>
+                </li>
+                <li>
+                    <a class="certificate_bar" href="#certificate">相關證明</a>
+                </li>
+                <li>
+                    <a class="experience_bar" href="#experience">工作經驗</a>
+                </li>
+                <li>
+                    <a class="bar" href="#collection">作品集</a>
+                </li>
+                <li>
+                    <a class="bar" href="#content">聯絡我</a>
+                </li>
+            </ul>
         </div>
         <div class="about" id="about">
             <div class="about1">
                 <h1 class="titile_h1">關於我
-                    <svg viewbox="0 0 100 10">
-                        <line x1=00 y1=0 x2=100 y2=0></line>
+                    <svg class="about_svg" viewbox="0 0 100 10">
+                        <line x1=0 y1=0 x2=100 y2=0></line>
                     </svg>
                 </h1>
                 <div class="p_center">
@@ -65,9 +93,9 @@
         </div>
         <div class="education" id="education">
             <div class="education1">
-                <h1 class="titile_h1">學歷
+                <h1 id="education_h1" class="titile_h1">學歷
                     <svg class="education_svg" viewbox="0 0 100 10">
-                        <line x1=00 y1=0 x2=70 y2=0></line>
+                        <line x1=0 y1=0 x2=70 y2=0></line>
                     </svg>
                 </h1>
                 <div class="separate">
@@ -87,11 +115,11 @@
         </div>
         <div class="ability" id="ability">
             <h1 class="titile_h1">專業能力
-                <svg viewbox="0 0 160 10">
-                    <line x1=00 y1=0 x2=160 y2=0></line>
+                <svg class="ability_svg" viewbox="0 0 130 10">
+                    <line x1=0 y1=0 x2=130 y2=0></line>
                 </svg>
             </h1>
-            <div class="container">
+            <div class="container ability_container">
                 <ul>
                     <li>
                         <div class="skill">SQL</div>
@@ -169,11 +197,10 @@
                 </ul>
             </div>
         </div>
-
         <div class="certificate" id="certificate">
             <h1 class="titile_h1">相關證明
-                <svg viewbox="0 0 130 10">
-                    <line x1=00 y1=0 x2=130 y2=0></line>
+                <svg class="certificate_svg" viewbox="0 0 130 10">
+                    <line x1=0 y1=0 x2=130 y2=0></line>
                 </svg>
             </h1>
             <ul>證照
@@ -204,18 +231,36 @@
                 </li>
             </ul>
         </div>
-        <div class="work_experience" id="work_experience">
-            <h1 class="titile_h1">工作經驗</h1>
+        <div class="experience" id="experience">
+            <h1 class="titile_h1 experience_h1">工作經驗
+                <svg class="experience_svg" viewbox="0 0 130 10">
+                    <line x1=0 y1=0 x2=130 y2=0></line>
+                </svg>
+            </h1>
             <div class="p_center">
                 <p>白紙的社會新鮮人，可以被任何的風格給塑造</p>
             </div>
         </div>
         <div class="collection" id="collection">
-            <h1 class="titile_h1">作品集</h1>
+            <h1 class="titile_h1 collection_h1">作品集
+                <svg class="collection_svg" viewbox="0 0 100 10">
+                    <line x1=0 y1=0 x2=100 y2=0></line>
+                </svg>
+            </h1>
             <img src="images/collection/collection_hackmd.svg" alt="">
         </div>
         <div class="content" id="content">
-            <h1 class="titile_h1">聯絡我</h1>
+            <h1 class="titile_h1 content_h1">聯絡我
+                <svg class="content_svg" viewbox="0 0 100 10">
+                    <line x1=0 y1=0 x2=100 y2=0></line>
+                </svg>
+            </h1>
+            <p>姓名</p>
+            <p>電話</p>
+            <p>電子郵件</p>
+
+            <p>也可以填寫以下表格</p>
+            <button></button>
         </div>
     </div>
     <!-- Optional JavaScript -->
@@ -254,7 +299,144 @@
                 e.preventDefault()
                 window.scrollTo({ 'behavior': 'smooth', 'top': ability_target.offsetTop })
             }
-        })
+        });
+
+        let certificate = document.querySelector('a[href="#certificate"]')
+        let certificate_target = document.getElementById('certificate')
+        certificate.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': certificate_target.offsetTop })
+            }
+        });
+
+        let experience = document.querySelector('a[href="#experience"]')
+        let experience_target = document.getElementById('experience')
+        experience.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': experience_target.offsetTop })
+            }
+        });
+
+        let collection = document.querySelector('a[href="#collection"]')
+        let collection_target = document.getElementById('collection')
+        collection.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': collection_target.offsetTop })
+            }
+        });
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            console.log(scroll);
+        });
+
+        $(window).scroll(function () {
+            $('.about1').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.about_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 445) {
+                    $('.about_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.education').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 76 && topOfWindow < 685) {
+                    $('.education_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 685) {
+                    $('.education_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.ability').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 218 && topOfWindow < 896) {
+                    $('.ability_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 896) {
+                    $('.ability_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.ability_container').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.stock').addClass('add_fade');
+                } else {
+                    $('.stock').removeClass('add_fade');
+                }
+            });
+
+            $('.certificate').each(function () {
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow > 736 && topOfWindow < 1500) {
+                    $('.certificate_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 1500) {
+                    $('.certificate_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.experience_h1').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+                // var imageTest = $(window).offset().top;
+
+                console.log('imagePos(offset.top)  ' + imagePos);
+                console.log('imageHeight(this.height)  ' + imageHeight);
+                console.log('topOfWindow(window.scrollTop)  ' + topOfWindow);
+                // console.log('imageTest(this.offset.top)  ' + imageTest);
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.experience_svg').addClass('add_keyframe');
+                } else {
+                    $('.experience_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.collection_h1').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.collection_svg').addClass('add_keyframe');
+                } else {
+                    $('.collection_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.content_h1').each(function () {
+                var topOfWindow = $(window).scrollTop();
+                var last = $("body").height() - $(window).height();
+
+                // console.log('imagePos(offset.top)  ' + imagePos);
+                // console.log('imageHeight(this.height)  ' + imageHeight);
+                // console.log('topOfWindow(window.scrollTop)  ' + topOfWindow);
+
+                if ($(window).scrollTop() >= last) {
+                    $('.content_svg').addClass('add_keyframe');
+                } else if (topOfWindow < 335 ) {
+                    $('.content_svg').removeClass('add_keyframe');
+                }
+            });
+        });
 
 
     </script>
