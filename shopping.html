@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/shopping.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="buylist">
+        <h1>MyBuylist 購物清單</h1>
+        <div class="buy_item control_panel">
+            <label for="">產品名稱</label>
+            <input id="input_name" type="text" placeholder="名稱...">
+            <label for="">價錢</label>
+            <input id="input_price" type="text" placeholder="...">
+            <span class="addbtn">+新增</span>
+        </div>
+        <div id="items_list">
+            <!-- <li class="buy_item">1.吹風機
+                <div class="price">100</div>
+                <div class="del_btn">X</div>
+            </li>
+            <li class="buy_item">2.吹風機
+                <div class="price">100</div>
+                <div class="del_btn">X</div>
+            </li>
+            <li class="buy_item">3.吹風機
+                <div class="price">100</div>
+                <div class="del_btn">X</div>
+            </li> -->
+            <!-- <li class="buy_item total">總價
+                <div class="price">500</div>
+            </li> -->
+        </div>
+    </div>
+</body>
+<script>
+    var shoplist = {};
+    shoplist.name = "MyBuylist 購物清單";
+    shoplist.time = "2016/9/10";
+    shoplist.list = [
+        { name: "吹風機", price: 300 },
+        { name: "麥克筆", price: 9000 },
+        { name: "筆記型電腦", price: 54555 },
+        { name: "Iphone 9", price: 32000 },
+        { name: "神奇海螺", price: 5000 }
+    ];
+    //動態產生html
+    var item_html = "<li id={{id}} class='buy_item'>num.{{item}}<div class='price'>{{price}}</div><div id={{del_id}} class='del_btn'>X</div></li>"
+    //總價
+    var total_html = "<li class='buy_item total'>總價<div class='price'>{{price}}</div></li>";
+
+    function showlist() {
+        $("#items_list").html("");
+        var total_price = 0;
+        for (var i = 0; i < shoplist.list.length; i++) {
+            var item = shoplist.list[i];
+            var item_id = "buyitem_" + i;
+            var del_item_id = "del_buyitem_" + i;
+            total_price += parseInt(item.price);
+            // console.log(total_price);
+            var current_item_html = item_html.replace("num", i + 1)
+                .replace("{{item}}", item.name)
+                .replace("{{id}}", item_id)
+                .replace("{{del_id}}", del_item_id)
+                .replace("{{price}}", item.price)
+            //動態產生
+            $("#items_list").append(current_item_html);
+            //delbtn id buyitem_數字
+            $("#" + del_item_id).click(function () {
+                remove_item(del_item_id);
+            });
+        };
+        //計算總價
+        var current_total_html = total_html.replace("{{price}}", total_price);
+        $("#items_list").append(current_total_html);
+    }
+
+    //新增物品名稱與價格
+    $(".addbtn").click(function () {
+        if (!isNaN(parseInt($("#input_price").val())) && $("#input_name").val()) {
+            shoplist.list.push({
+                name: $("#input_name").val(),
+                price: $("#input_price").val()
+            });
+        }
+
+        $("#input_name").val("");
+        $("#input_price").val("");
+        showlist();
+    });
+
+    function remove_item(id) {
+        shoplist.list.splice(id, 1);
+        showlist();
+    }
+
+    $(".del_btn").click(function () {
+
+    });
+
+</script>
+
+</html>

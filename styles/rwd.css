@@ -24,7 +24,7 @@
   }
   .resume {
     width: 50%;
-    max-width: 768px;
+    max-width: 960px;
   }
   .resume .titile_h1 {
     padding-left: 20px;
@@ -38,7 +38,7 @@
   .menu {
     position: fixed;
     width: 50%;
-    max-width: 768px;
+    max-width: 960px;
     top: 0;
     z-index: 100;
     -webkit-box-sizing: border-box;
@@ -155,7 +155,7 @@
   }
   .ability {
     background-color: #333333;
-    height: 450px;
+    height: 400px;
   }
   .ability h1 {
     display: -webkit-box;
@@ -183,34 +183,51 @@
   .ability ul li .skill {
     color: #cccccc;
   }
-  .ability ul li .progress {
-    background-color: #cccccc;
-  }
-  .ability ul li .progress .progress-bar {
-    background-color: #ffffff;
-    opacity: 0;
+  .ability ul li .div_bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: grey;
     border: solid 1px #cccccc;
+    border-radius: 5px;
   }
-  .ability ul li .progress .stock {
+  .ability ul li .div_bar .bar {
+    background-color: #333333;
+    border: solid 1px #cccccc;
+    border-radius: 3px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 20px;
+    visibility: hidden;
+  }
+  .ability ul li .div_bar .bar.v1 {
+    background-color: #ffffff;
+  }
+  .ability ul li .div_bar .stock {
     z-index: 4;
   }
-  .ability ul li .progress .stock2 {
+  .ability ul li .div_bar .stock2 {
     -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
     z-index: 3;
   }
-  .ability ul li .progress .stock3 {
+  .ability ul li .div_bar .stock3 {
     -webkit-animation-delay: 3s;
             animation-delay: 3s;
     z-index: 2;
   }
-  .ability ul li .progress .stock4 {
+  .ability ul li .div_bar .stock4 {
     -webkit-animation-delay: 4.5s;
             animation-delay: 4.5s;
     z-index: 1;
-  }
-  .ability ul li .progress .v1 {
-    background-color: #333333;
   }
   .ability ul li .text_skill {
     display: -webkit-box;
@@ -218,6 +235,7 @@
     display: flex;
   }
   .ability ul li .skill_text {
+    text-align: center;
     color: #cccccc;
     width: 25%;
   }
@@ -246,6 +264,9 @@
     padding-top: 20px;
     list-style-type: none;
   }
+  .experience {
+    background-color: #333333;
+  }
   .experience h1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -261,7 +282,19 @@
   }
   .experience svg line {
     stroke-width: 3px;
-    stroke: #333333;
+    stroke: white;
+  }
+  .experience .p_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+  }
+  .experience .p_center p {
+    color: #cccccc;
   }
   .collection h1 {
     display: -webkit-box;
@@ -305,10 +338,17 @@
     -webkit-transform: translateX(-300px);
             transform: translateX(-300px);
   }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
   }
 }
 
@@ -318,16 +358,62 @@
     -webkit-transform: translateX(-300px);
             transform: translateX(-300px);
   }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    visibility: visible;
   }
 }
 
 .add_fade {
   -webkit-animation: fade 2s ease-in-out forwards;
           animation: fade 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+.add_fade2 {
+  -webkit-animation: fade2 2s ease-in-out forwards;
+          animation: fade2 2s ease-in-out forwards;
 }
 
 @-webkit-keyframes appear {

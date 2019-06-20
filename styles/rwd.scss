@@ -28,10 +28,12 @@
   html,
   body {
     width: 100%;
+    // height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    // align-items: center;
     scroll-behavior: smooth;
   }
 
@@ -41,7 +43,7 @@
 
   .resume {
     width: 50%;
-    max-width: 768px;
+    max-width: 960px;
 
     .titile_h1 {
       padding-left: 20px;
@@ -53,11 +55,11 @@
       padding-left: 50px;
     }
   }
-  
+
   .menu {
     position: fixed;
     width: 50%;
-    max-width: 768px;
+    max-width: 960px;
     top: 0;
     z-index: 100;
 
@@ -173,7 +175,7 @@
   }
   .ability {
     background-color: #333333;
-    height: 450px;
+    height: 400px;
     // padding-top: 80px;
     h1 {
       display: flex;
@@ -192,6 +194,7 @@
 
     ul {
       padding-right: 20px;
+
       li {
         // display: flex;
         // flex-direction: row;
@@ -200,16 +203,28 @@
         .skill {
           color: #cccccc;
         }
-        .progress {
-          background-color: #cccccc;
-          .progress-bar {
-            background-color: #ffffff;
-            opacity: 0;
+
+        .div_bar {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: grey;
+          border: solid 1px #cccccc;
+          border-radius: 5px;
+
+          .bar {
+            background-color: #333333;
             border: solid 1px #cccccc;
-            // animation: fade 2s linear;
+            border-radius: 3px;
+            flex: 1;
+            height: 20px;
+            visibility: hidden;
           }
+          .bar.v1 {
+            background-color: #ffffff;
+          }
+
           .stock {
-            // animation: fade 2s ease-in-out forwards;
             z-index: 4;
           }
           .stock2 {
@@ -224,25 +239,51 @@
             animation-delay: 4.5s;
             z-index: 1;
           }
+        }
 
-          // @keyframes fade {
-          //   0% {
-          //     opacity: 0;
-          //     transform: translateX(-300px);
-          //   }
-          //   100% {
-          //     opacity: 1;
-          //     transform: translateX(0px);
-          //   }
-          // }
-          .v1 {
-            background-color: #333333;
-          }
-        } //progress
+        // .progress {
+        //   background-color: #cccccc;
+        //   .progress-bar {
+        //     background-color: #ffffff;
+        //     opacity: 0;
+        //     border: solid 1px #cccccc;
+        //   }
+        //   .stock {
+        //     z-index: 4;
+        //   }
+        //   .stock2 {
+        //     animation-delay: 1.5s;
+        //     z-index: 3;
+        //   }
+        //   .stock3 {
+        //     animation-delay: 3s;
+        //     z-index: 2;
+        //   }
+        //   .stock4 {
+        //     animation-delay: 4.5s;
+        //     z-index: 1;
+        //   }
+
+        // @keyframes fade {
+        //   0% {
+        //     opacity: 0;
+        //     transform: translateX(-300px);
+        //   }
+        //   100% {
+        //     opacity: 1;
+        //     transform: translateX(0px);
+        //   }
+        // }
+        // .v1 {
+        //   background-color: #333333;
+        // }
+        //progress
+
         .text_skill {
           display: flex;
         }
         .skill_text {
+          text-align: center;
           color: #cccccc;
           width: 25%;
           // display: inline-flex;
@@ -279,6 +320,8 @@
   }
 
   .experience {
+    background-color: #333333;
+
     h1 {
       display: flex;
       flex-direction: column;
@@ -288,7 +331,15 @@
       width: 130px;
       line {
         stroke-width: 3px;
-        stroke: #333333;
+        stroke: white;
+      }
+    }
+    .p_center {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      p {
+        color: #cccccc;
       }
     }
   }
@@ -322,26 +373,52 @@
       }
     }
   }
-
-  // .menu {
-  //   width: 50%;
-  //   max-width: 1280px;
-  // }
 }
+
+// .menu {
+//   width: 50%;
+//   max-width: 1280px;
+// }
 
 @keyframes fade {
   0% {
     opacity: 0;
     transform: translateX(-300px);
   }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
     transform: translateX(0px);
+    visibility: visible;
   }
 }
 
 .add_fade {
   animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+.add_fade2 {
+  animation: fade2 2s ease-in-out forwards;
 }
 
 @keyframes appear {
