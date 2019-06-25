@@ -181,6 +181,10 @@ body {
   fill: red;
 }
 
+.education .education_p {
+  display: none;
+}
+
 .ability {
   background-color: #333333;
   height: 400px;
@@ -382,7 +386,7 @@ body {
 }
 
 .content svg {
-  visibility: hidden;
+  display: none;
   width: 100px;
 }
 
@@ -520,7 +524,10 @@ body {
     display: inline-flex;
   }
   .resume .education .svg {
-    padding-left: 10px;
+    display: none;
+  }
+  .resume .education .education_p {
+    display: inherit;
   }
   .resume .ability {
     width: 100%;

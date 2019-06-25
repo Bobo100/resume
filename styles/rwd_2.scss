@@ -157,6 +157,9 @@ body {
       }
     }
   }
+  .education_p {
+    display: none;
+  }
 }
 .ability {
   background-color: #333333;
@@ -310,7 +313,7 @@ body {
     flex-direction: column;
   }
   svg {
-    visibility: hidden;
+    display: none;
     width: 100px;
     line {
       stroke-width: 3px;
@@ -402,7 +405,8 @@ body {
     .education {
       display: inline-flex;
       .svg {
-          padding-left: 10px;
+        display: none;
+        // padding-left: 10px;
         // circle {
         //   display: none;
         // }
@@ -412,6 +416,9 @@ body {
         // display: none;
         // width: 280%;
         // height: 100px;
+      }
+      .education_p {
+        display: inherit;
       }
     }
     .ability {
