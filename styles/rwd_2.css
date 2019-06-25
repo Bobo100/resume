@@ -181,8 +181,16 @@ body {
   fill: red;
 }
 
-.education .education_p {
+.education .separate .rwd_education {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
   display: none;
+}
+
+.education .separate .rwd_education img {
+  width: 150px;
 }
 
 .ability {
@@ -505,6 +513,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  html,
+  body {
+    padding-top: 10px;
+  }
   .resume .menu {
     display: none;
   }
@@ -526,8 +538,12 @@ body {
   .resume .education .svg {
     display: none;
   }
-  .resume .education .education_p {
+  .resume .education .rwd_education {
     display: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
   }
   .resume .ability {
     width: 100%;

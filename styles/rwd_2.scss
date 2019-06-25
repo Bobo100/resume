@@ -156,9 +156,14 @@ body {
         fill: red;
       }
     }
-  }
-  .education_p {
-    display: none;
+    .rwd_education {
+      display: flex;
+      padding: 10px;
+      display: none;
+      img {
+        width: 150px;
+      }
+    }
   }
 }
 .ability {
@@ -388,6 +393,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  html,
+  body {
+    padding-top: 10px;
+  }
   .resume {
     .menu {
       display: none;
@@ -406,19 +415,11 @@ body {
       display: inline-flex;
       .svg {
         display: none;
-        // padding-left: 10px;
-        // circle {
-        //   display: none;
-        // }
-        // line {
-        //   display: none;
-        // }
-        // display: none;
-        // width: 280%;
-        // height: 100px;
       }
-      .education_p {
+      .rwd_education {
         display: inherit;
+        display: flex;
+        padding: 10px;
       }
     }
     .ability {
