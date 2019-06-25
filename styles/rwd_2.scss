@@ -408,6 +408,16 @@ body {
       }
     }
     .certificate {
+      box-sizing: border-box;
+      ul {
+        padding-left: 20px;
+        color: #669999;
+        border: solid 3px #333333;
+        li {
+          padding-left: 0px;
+          padding-top: 10px;
+        }
+      }
     }
   }
 }

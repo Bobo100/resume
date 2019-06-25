@@ -523,5 +523,18 @@ body {
     width: 250%;
     height: 100px;
   }
+  .resume .certificate {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .resume .certificate ul {
+    padding-left: 20px;
+    color: #669999;
+    border: solid 3px #333333;
+  }
+  .resume .certificate ul li {
+    padding-left: 0px;
+    padding-top: 10px;
+  }
 }
 /*# sourceMappingURL=rwd_2.css.map */
