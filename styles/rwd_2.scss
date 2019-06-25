@@ -402,6 +402,12 @@ body {
     .education {
       display: inline-flex;
       .svg {
+        circle {
+          display: none;
+        }
+        line {
+          display: none;
+        }
         // display: none;
         width: 100%;
         height: 100px;
