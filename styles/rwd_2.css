@@ -520,7 +520,8 @@ body {
     display: inline-flex;
   }
   .resume .education .svg {
-    width: 380%;
+    width: 250%;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=rwd_2.css.map */
