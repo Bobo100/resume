@@ -499,4 +499,25 @@ body {
   -webkit-animation: appear 3s ease-in-out forwards;
           animation: appear 3s ease-in-out forwards;
 }
-/*# sourceMappingURL=rwd.css.map */
+
+@media screen and (max-width: 800px) {
+  .resume .menu {
+    display: none;
+  }
+  .resume .about {
+    display: block;
+  }
+  .resume .about .about1 {
+    height: 250px;
+    width: 100%;
+  }
+  .resume .about .about2 {
+    display: none;
+  }
+  .resume .education {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+/*# sourceMappingURL=rwd_2.css.map */

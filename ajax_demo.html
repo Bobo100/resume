@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/ajax_demo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JSON與ajax的結合</h2>
+    <h4>JSON.parse(文字)->物件結構</h4>
+    <div class="todolist">
+        <h3>我的代辦清單</h3>
+        <hr>
+        <ul id="listitem">
+            <!-- <li class="{{class}}">{{num}}.{{name}}({{date}})</li> -->
+            <!-- <li>項目</li> -->
+        </ul>
+    </div>
+    <script>
+        var item_template = "<li class='{{class}}'>{{num}}.{{name}}({{date}})</li>";
+        var data_url = "https://awiclass.monoame.com/api/command.php?type=get&name=tododata";
+
+        var tododata;
+        $.ajax(
+            {
+                url: data_url,
+                success: function (res) {
+                    console.log(res);
+                    tododata = JSON.parse(res); //整理成物件格式 name date done
+                    for (var i = 0; i < tododata.length; i++) {
+                        var item = tododata[i]
+                        var now_class = (item.done == true) ? "done" : "";
+
+
+                        var now_item = item_template.replace("{{name}}", item.name)
+                            .replace("{{num}}", i + 1)
+                            .replace("{{date}}", item.date)
+                            .replace("{{class}}", now_class);
+                        $("#listitem").append(now_item);
+                    }
+                }
+            }
+        );
+    </script>
+</body>
+
+</html>

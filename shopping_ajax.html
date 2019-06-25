@@ -40,6 +40,8 @@
     </div>
 </body>
 <script>
+    var itemurl = "https://awiclass.monoame.com/api/command.php?type=get&name=itemdata";
+
     var shoplist = {};
     shoplist.name = "MyBuylist 購物清單";
     shoplist.time = "2016/9/10";
@@ -50,6 +52,14 @@
         { name: "Iphone 9", price: 32000 },
         { name: "神奇海螺", price: 5000 }
     ];
+
+    $.ajax({
+        url: itemurl,
+        success: function (res) {
+            console.log(JSON.parse(res));
+        }
+    });
+
     //動態產生html
     var item_html = "<li id={{id}} class='buy_item'>num.{{item}}<div class='price'>{{price}}</div><div id={{del_id}} data-del-id='{{delid}}' class='del_btn'>X</div></li>"
     //總價

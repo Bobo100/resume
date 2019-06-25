@@ -1,0 +1,141 @@
+@charset "UTF-8";
+* {
+  vertical-align: middle;
+  font-family: 微軟正黑體;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9ebee;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topbar {
+  height: 50px;
+  background-color: #3b5998;
+}
+
+.topbar .icon {
+  height: 30px;
+  margin: 10px;
+}
+
+.topbar input {
+  height: 30px;
+  width: 300px;
+  margin: 10px;
+  margin-left: 0px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+
+.cover {
+  height: 330px;
+  background-image: url("https://scontent.ftpe9-1.fna.fbcdn.net/v/t1.0-9/48358344_1144985199004171_3867394797647953920_o.jpg?_nc_cat=109&_nc_oc=AQkXnAzdjes-NaYItTWn75I5ryIUdA77Ao_P1ARGWAkcQg2ykngSAzris_BuNMp63oM&_nc_ht=scontent.ftpe9-1.fna&oh=61ceaa14e5361d5db6b0e8f0bf5ea4f0&oe=5D88260B");
+  background-position: center 30%;
+}
+
+.midbar {
+  height: 50px;
+  position: relative;
+  background-color: #fff;
+}
+
+.midbar .personimg {
+  width: 130px;
+  height: 130px;
+  background-image: url("https://cdn.hk01.com/di/media/images/2571931/org/f9e4d4f538badf12a9234183643c78f6.jpg/QbbmAzKtIl_agzA0IGZUUSpO-xeE_56sfSAUxH0gFMQ?v=w1920r16_9");
+  background-size: 200% auto;
+  border: solid 4px white;
+  position: absolute;
+  top: -110px;
+  left: 20px;
+}
+
+.midbar .personimg .names {
+  position: absolute;
+  right: -120px;
+  color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.midbar .personimg .names h2,
+.midbar .personimg .names h5 {
+  margin: 0;
+}
+
+.midbar .personimg .names h2 {
+  font-size: 32px;
+}
+
+.midbar .personimg .names h5 {
+  font-size: 16px;
+}
+
+.bottombar {
+  width: 35%;
+  min-width: 350px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 25px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .topbar {
+    height: 60px;
+  }
+  .topbar .icon {
+    height: 40px;
+  }
+  .topbar input {
+    height: 30px;
+    width: calc(100% - 40px - 60px);
+    background-color: #2d4373;
+    color: white;
+  }
+  .midbar {
+    height: 200px;
+  }
+  .midbar .personimg {
+    width: 160px;
+    height: 160px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .midbar .personimg .names {
+    right: initial;
+    left: 50%;
+    top: 110%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    white-space: nowrap;
+    color: #555;
+  }
+  .bottombar {
+    margin: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .bottombar p {
+    border-top: solid 1px #bbbbbb;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=facebook.css.map */

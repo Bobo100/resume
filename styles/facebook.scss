@@ -1,0 +1,137 @@
+$content_max_width: 1024px;
+
+$color_lightblue: #e9ebee;
+$color_blue: #3b5998;
+$color_white: #fff;
+$color_black: #555;
+
+$break_width: 800px;
+
+* {
+  //   border: solid 1px black;
+  vertical-align: middle; //為了input (其預設的vertical-align並不是中間
+  font-family: 微軟正黑體;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  //   display: flex;
+  //   justify-content: center;
+  background-color: $color_lightblue;
+}
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topbar {
+  height: 50px;
+  background-color: $color_blue;
+  .icon {
+    height: 30px;
+    margin: 10px;
+  }
+  input {
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+    margin-left: 0px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: none; //取消掉
+  }
+}
+.cover {
+  height: 330px;
+  background-image: url("https://scontent.ftpe9-1.fna.fbcdn.net/v/t1.0-9/48358344_1144985199004171_3867394797647953920_o.jpg?_nc_cat=109&_nc_oc=AQkXnAzdjes-NaYItTWn75I5ryIUdA77Ao_P1ARGWAkcQg2ykngSAzris_BuNMp63oM&_nc_ht=scontent.ftpe9-1.fna&oh=61ceaa14e5361d5db6b0e8f0bf5ea4f0&oe=5D88260B");
+  background-position: center 30%;
+}
+.midbar {
+  height: 50px;
+  position: relative;
+  background-color: $color_white;
+  .personimg {
+    width: 130px;
+    height: 130px;
+    background-image: url("https://cdn.hk01.com/di/media/images/2571931/org/f9e4d4f538badf12a9234183643c78f6.jpg/QbbmAzKtIl_agzA0IGZUUSpO-xeE_56sfSAUxH0gFMQ?v=w1920r16_9");
+    background-size: 200% auto;
+    border: solid 4px white;
+    position: absolute;
+    top: -110px;
+    left: 20px;
+    .names {
+      position: absolute;
+      right: -120px;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%);
+      h2,
+      h5 {
+        margin: 0;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      h5 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.bottombar {
+  //   height: 200px;
+  width: 35%;
+  min-width: 350px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 25px;
+  background-color: $color_white;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: $break_width) {
+  .topbar {
+    height: 60px;
+    .icon {
+      height: 40px;
+      //   margin: 10px;
+    }
+    input {
+      height: 30px;
+      width: calc(100% - 40px - 60px); //100% 左邊留下40 右邊60
+      background-color: darken($color_blue, 10);
+      color: white;
+    }
+  }
+  .midbar {
+    height: 200px; //增加空間讓名字可以放下去
+    .personimg {
+      width: 160px;
+      height: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      .names {
+        right: initial; //回歸初始值
+        left: 50%;
+        top: 110%;
+        transform: translateX(-50%);
+        white-space: nowrap; //不要換行
+        color: $color_black;
+      }
+    }
+  }
+  .bottombar {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    p {
+      border-top: solid 1px lighten($color_black, 40);
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 13px;
+    }
+  }
+}
