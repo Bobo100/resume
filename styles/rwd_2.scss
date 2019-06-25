@@ -407,16 +407,32 @@ body {
         height: 100px;
       }
     }
+    .ability {
+      width: 100%;
+    }
     .certificate {
-      box-sizing: border-box;
+      //   box-sizing: border-box;
       ul {
         padding-left: 20px;
         color: #669999;
-        border: solid 3px #333333;
+        // border: solid 3px #333333;
         li {
           padding-left: 0px;
           padding-top: 10px;
         }
+      }
+    }
+    .experience {
+      width: 100%;
+      p {
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-left: 20px;
+      }
+    }
+    .content {
+      p {
+        padding-left: 20px;
       }
     }
   }

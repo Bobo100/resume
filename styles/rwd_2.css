@@ -523,18 +523,27 @@ body {
     width: 250%;
     height: 100px;
   }
-  .resume .certificate {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  .resume .ability {
+    width: 100%;
   }
   .resume .certificate ul {
     padding-left: 20px;
     color: #669999;
-    border: solid 3px #333333;
   }
   .resume .certificate ul li {
     padding-left: 0px;
     padding-top: 10px;
+  }
+  .resume .experience {
+    width: 100%;
+  }
+  .resume .experience p {
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 20px;
+  }
+  .resume .content p {
+    padding-left: 20px;
   }
 }
 /*# sourceMappingURL=rwd_2.css.map */
