@@ -519,5 +519,8 @@ body {
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+  .resume .education .svg {
+    width: 380%;
+  }
 }
 /*# sourceMappingURL=rwd_2.css.map */
