@@ -520,14 +520,9 @@ body {
     display: inline-flex;
   }
   .resume .education .svg {
-    width: 100%;
+    padding-left: 10px;
+    width: 280%;
     height: 100px;
-  }
-  .resume .education .svg circle {
-    display: none;
-  }
-  .resume .education .svg line {
-    display: none;
   }
   .resume .ability {
     width: 100%;

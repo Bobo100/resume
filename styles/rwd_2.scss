@@ -402,14 +402,15 @@ body {
     .education {
       display: inline-flex;
       .svg {
-        circle {
-          display: none;
-        }
-        line {
-          display: none;
-        }
+          padding-left: 10px;
+        // circle {
+        //   display: none;
+        // }
+        // line {
+        //   display: none;
+        // }
         // display: none;
-        width: 100%;
+        width: 280%;
         height: 100px;
       }
     }
