@@ -27,7 +27,7 @@ body {
 }
 
 .resume {
-//   width: 100%;
+  //   width: 100%;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -421,7 +421,10 @@ body {
       .rwd_education {
         display: inherit;
         display: flex;
-        padding: 10px;
+        // margin: 10px;
+        .rwd_education1 {
+          width: 35%;
+        }
       }
     }
     .ability {
