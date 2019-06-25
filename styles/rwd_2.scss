@@ -16,8 +16,8 @@ body {
   // height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  //   display: flex;
+  //   justify-content: center;
   // align-items: center;
   scroll-behavior: smooth;
 }
@@ -27,8 +27,10 @@ body {
 }
 
 .resume {
-  width: 100%;
+//   width: 100%;
   max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 
   .titile_h1 {
     padding-left: 20px;
