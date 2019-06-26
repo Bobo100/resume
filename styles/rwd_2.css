@@ -4,6 +4,7 @@
   font-family: "Noto Sans TC";
   color: #333333;
   font-size: 15pt;
+  vertical-align: top;
 }
 
 html,
@@ -185,7 +186,7 @@ body {
 }
 
 .education .separate .rwd_education img {
-  width: 150px;
+  width: 100px;
 }
 
 .ability {

@@ -7,6 +7,7 @@
   font-family: "Noto Sans TC";
   color: #333333;
   font-size: 15pt;
+  vertical-align: top;
   // border: solid 1px;
 }
 
@@ -163,7 +164,7 @@ body {
       padding: 10px;
       display: none;
       img {
-        width: 150px;
+        width: 100px;
       }
     }
   }
@@ -189,14 +190,11 @@ body {
 
   ul {
     padding-right: 20px;
-
     li {
       list-style-type: none;
-
       .skill {
         color: #cccccc;
       }
-
       .div_bar {
         display: flex;
         flex-direction: row;
@@ -204,7 +202,6 @@ body {
         background-color: grey;
         border: solid 1px #cccccc;
         border-radius: 5px;
-
         .bar {
           background-color: #333333;
           border: solid 1px #cccccc;
@@ -216,7 +213,6 @@ body {
         .bar.v1 {
           background-color: #ffffff;
         }
-
         .stock {
           z-index: 4;
         }
@@ -241,7 +237,6 @@ body {
         text-align: center;
         color: #cccccc;
         width: 25%;
-        // display: inline-flex;
       }
     } //li
   } //ul
@@ -268,8 +263,6 @@ body {
       padding-left: 40px;
       padding-top: 20px;
       list-style-type: none;
-      blockquote {
-      }
     }
   }
 }
@@ -328,11 +321,6 @@ body {
     }
   }
 }
-
-// .menu {
-//   width: 50%;
-//   max-width: 1280px;
-// }
 
 @keyframes fade {
   0% {
