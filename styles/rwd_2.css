@@ -535,12 +535,12 @@ body {
     display: none;
   }
   .resume .education .rwd_education {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   .resume .education .rwd_education .rwd_education1 {
-    width: 30%;
+    width: 30% !important;
   }
   .resume .ability {
     width: 100%;

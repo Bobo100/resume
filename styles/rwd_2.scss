@@ -408,10 +408,10 @@ body {
       }
       .rwd_education {
         // display: inherit;
-        display: flex;
+        display: inline-flex;
         // margin: 10px;
         .rwd_education1 {
-          width: 30%;
+          width: 30% !important;
         }
       }
     }
