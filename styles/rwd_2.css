@@ -185,10 +185,6 @@ body {
   display: none;
 }
 
-.education .separate .rwd_education img {
-  width: 100px;
-}
-
 .ability {
   background-color: #333333;
   height: 400px;
@@ -540,7 +536,14 @@ body {
     display: inline-flex;
   }
   .resume .education .rwd_education .rwd_education1 {
-    width: 30% !important;
+    width: 30%;
+  }
+  .resume .education .rwd_education .rwd_education1 img {
+    width: 150px;
+  }
+  .resume .education .rwd_education .rwd_education2 {
+    width: 50%;
+    white-space: nowrap;
   }
   .resume .ability {
     width: 100%;

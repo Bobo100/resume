@@ -164,7 +164,6 @@ body {
       padding: 10px;
       display: none;
       img {
-        width: 100px;
       }
     }
   }
@@ -411,7 +410,14 @@ body {
         display: inline-flex;
         // margin: 10px;
         .rwd_education1 {
-          width: 30% !important;
+          width: 30%;
+          img {
+            width: 150px;
+          }
+        }
+        .rwd_education2 {
+          width: 50%;
+          white-space: nowrap;
         }
       }
     }
