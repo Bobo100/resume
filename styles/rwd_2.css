@@ -534,12 +534,14 @@ body {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .resume .education .rwd_education .rwd_education1 {
     width: 30%;
   }
   .resume .education .rwd_education .rwd_education1 img {
-    width: 150px;
+    width: 120px;
   }
   .resume .education .rwd_education .rwd_education2 {
     width: 40%;
