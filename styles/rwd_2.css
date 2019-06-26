@@ -9,7 +9,6 @@
 
 html,
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -546,6 +545,65 @@ body {
   .resume .education .rwd_education .rwd_education2 {
     width: 40%;
     white-space: nowrap;
+  }
+  .resume .ability {
+    width: 100%;
+  }
+  .resume .certificate ul {
+    padding-left: 20px;
+    color: #669999;
+  }
+  .resume .certificate ul li {
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+  .resume .experience {
+    width: 100%;
+  }
+  .resume .experience p {
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-left: 20px;
+  }
+  .resume .content p {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  html,
+  body {
+    padding-top: 10px;
+  }
+  .resume .menu {
+    display: none;
+  }
+  .resume .about {
+    display: block;
+  }
+  .resume .about .about1 {
+    height: 250px;
+    width: 100%;
+  }
+  .resume .about .about2 {
+    display: none;
+  }
+  .resume .education {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .resume .education .svg {
+    display: none;
+  }
+  .resume .education .rwd_education .rwd_education1 {
+    display: none;
+  }
+  .resume .education .rwd_education .rwd_education2 {
+    width: 100%;
+  }
+  .resume .education .rwd_education .rwd_education2 .education_p {
+    margin: 0;
   }
   .resume .ability {
     width: 100%;

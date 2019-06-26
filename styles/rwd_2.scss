@@ -13,7 +13,7 @@
 
 html,
 body {
-  width: 100%;
+  //   width: 100%;
   // height: 100%;
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ body {
 }
 
 .resume {
-  //   width: 100%;
+  // width: 100%;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -418,8 +418,77 @@ body {
         }
         .rwd_education2 {
           width: 40%;
-        //   margin-left: 10px;
+          //   margin-left: 10px;
           white-space: nowrap;
+        }
+      }
+    }
+    .ability {
+      width: 100%;
+    }
+    .certificate {
+      //   box-sizing: border-box;
+      ul {
+        padding-left: 20px;
+        color: #669999;
+        // border: solid 3px #333333;
+        li {
+          padding-left: 0px;
+          padding-top: 10px;
+        }
+      }
+    }
+    .experience {
+      width: 100%;
+      p {
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-left: 20px;
+      }
+    }
+    .content {
+      p {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 357px) {
+  html,
+  body {
+    padding-top: 10px;
+  }
+  .resume {
+    .menu {
+      display: none;
+    }
+    .about {
+      display: block;
+      .about1 {
+        height: 250px;
+        width: 100%;
+      }
+      .about2 {
+        display: none;
+      }
+    }
+    .education {
+      display: inline-flex;
+      .svg {
+        display: none;
+      }
+      .rwd_education {
+        .rwd_education1 {
+          display: none;
+          img {
+          }
+        }
+        .rwd_education2 {
+          width: 100%;
+          .education_p {
+            margin: 0;
+          }
         }
       }
     }
