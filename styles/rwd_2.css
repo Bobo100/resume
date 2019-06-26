@@ -534,13 +534,12 @@ body {
     display: none;
   }
   .resume .education .rwd_education {
-    display: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .resume .education .rwd_education .rwd_education1 {
-    width: 35%;
+    width: 30%;
   }
   .resume .ability {
     width: 100%;
