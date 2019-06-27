@@ -45,10 +45,12 @@
                     </svg>
                 </h1>
                 <div class="p_center">
-                    <p>熱愛遊戲到沉溺遊戲
-                        <br>擁有作家拖延症候群
-                        <br>充滿新世代無力感
-                        <br>好奇世界的運作
+                    <p>
+                        誠實」是最好的策略是我很喜歡的一句話<br>
+                        曾經是「死」學生。<br>
+                        所謂的「死」是對學分與分數高的追求、四年學習的荒廢以及喪失學習熱忱<br>
+                        役畢後已重獲學習熱忱，找到自己的興趣<br>
+                        想在前端留下自己的空間<br>
                     </p>
                 </div>
             </div>
@@ -228,7 +230,7 @@
                 e.preventDefault()
                 window.scrollTo({ 'behavior': 'smooth', 'top': about_target.offsetTop })
             }
-        })
+        });
         let education = document.querySelector('a[href="#education"]')
         let education_target = document.getElementById('education')
         education.addEventListener('click', function (e) {
@@ -236,7 +238,7 @@
                 e.preventDefault()
                 window.scrollTo({ 'behavior': 'smooth', 'top': education_target.offsetTop })
             }
-        })
+        });
         let ability = document.querySelector('a[href="#ability"]')
         let ability_target = document.getElementById('ability')
         ability.addEventListener('click', function (e) {
@@ -272,11 +274,6 @@
                 window.scrollTo({ 'behavior': 'smooth', 'top': collection_target.offsetTop })
             }
         });
-
-        // $(window).scroll(function () {
-        //     var scroll = $(window).scrollTop();
-        //     console.log(scroll);
-        // });
 
         $(window).scroll(function () {
             $('.about1').each(function () {
@@ -366,10 +363,6 @@
             $('.content_h1').each(function () {
                 var topOfWindow = $(window).scrollTop();
                 var last = $("body").height() - $(window).height();
-
-                // console.log('imagePos(offset.top)  ' + imagePos);
-                // console.log('imageHeight(this.height)  ' + imageHeight);
-                // console.log('topOfWindow(window.scrollTop)  ' + topOfWindow);
 
                 if ($(window).scrollTop() >= last) {
                     $('.content_svg').addClass('add_keyframe');
