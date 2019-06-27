@@ -273,10 +273,10 @@
             }
         });
 
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            console.log(scroll);
-        });
+        // $(window).scroll(function () {
+        //     var scroll = $(window).scrollTop();
+        //     console.log(scroll);
+        // });
 
         $(window).scroll(function () {
             $('.about1').each(function () {
@@ -344,7 +344,7 @@
 
                 if (topOfWindow >= 933 && topOfWindow < 1500) {
                     $('.experience_svg').addClass('add_keyframe');
-                } else if (topOfWindow >= 1500) {
+                } else if (topOfWindow >= 1700) {
                     $('.experience_svg').removeClass('add_keyframe');
                 } else if (topOfWindow <= 0) {
                     $('.experience_svg').removeClass('add_keyframe');
