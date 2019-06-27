@@ -219,7 +219,167 @@
         </div>
     </div>
     <script>
-        var education = "<p class='education_p'><span>淡江大學 (畢業)</span><span>資訊管理學系 輔 教育科技學系</span><span>2013/09~2018/06</span></p>"
+        // var education = "<p class='education_p'><span>淡江大學 (畢業)</span><span>資訊管理學系 輔 教育科技學系</span><span>2013/09~2018/06</span></p>"
+
+        let about = document.querySelector('a[href="#about"]')
+        let about_target = document.getElementById('about')
+        about.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': about_target.offsetTop })
+            }
+        })
+        let education = document.querySelector('a[href="#education"]')
+        let education_target = document.getElementById('education')
+        education.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': education_target.offsetTop })
+            }
+        })
+        let ability = document.querySelector('a[href="#ability"]')
+        let ability_target = document.getElementById('ability')
+        ability.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': ability_target.offsetTop })
+            }
+        });
+
+        let certificate = document.querySelector('a[href="#certificate"]')
+        let certificate_target = document.getElementById('certificate')
+        certificate.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': certificate_target.offsetTop })
+            }
+        });
+
+        let experience = document.querySelector('a[href="#experience"]')
+        let experience_target = document.getElementById('experience')
+        experience.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': experience_target.offsetTop })
+            }
+        });
+
+        let collection = document.querySelector('a[href="#collection"]')
+        let collection_target = document.getElementById('collection')
+        collection.addEventListener('click', function (e) {
+            if (window.scrollTo) {
+                e.preventDefault()
+                window.scrollTo({ 'behavior': 'smooth', 'top': collection_target.offsetTop })
+            }
+        });
+
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            console.log(scroll);
+        });
+
+        $(window).scroll(function () {
+            $('.about1').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.about_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 445) {
+                    $('.about_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.education').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 76 && topOfWindow < 685) {
+                    $('.education_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 685) {
+                    $('.education_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.ability').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 218 && topOfWindow < 896) {
+                    $('.ability_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 896) {
+                    $('.ability_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.ability_container').each(function () {
+                var imagePos = $(this).offset().top;
+                var imageHeight = $(this).height();
+                var topOfWindow = $(window).scrollTop();
+
+                if (imagePos + imageHeight > topOfWindow) {
+                    $('.fade').addClass('add_fade');
+                    $('.stock2').addClass('add_fade2');
+                } else {
+                    $('.fade').removeClass('add_fade');
+                    $('.stock2').removeClass('add_fade2');
+                }
+            });
+
+            $('.certificate').each(function () {
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 736 && topOfWindow < 1500) {
+                    $('.certificate_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 1500) {
+                    $('.certificate_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.experience_h1').each(function () {
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 933 && topOfWindow < 1500) {
+                    $('.experience_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 1500) {
+                    $('.experience_svg').removeClass('add_keyframe');
+                } else if (topOfWindow <= 0) {
+                    $('.experience_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.collection_h1').each(function () {
+                var topOfWindow = $(window).scrollTop();
+
+                if (topOfWindow >= 933 && topOfWindow < 1500) {
+                    $('.collection_svg').addClass('add_keyframe');
+                } else if (topOfWindow >= 1500) {
+                    $('.collection_svg').removeClass('add_keyframe');
+                } else if (topOfWindow <= 0) {
+                    $('.collection_svg').removeClass('add_keyframe');
+                }
+            });
+
+            $('.content_h1').each(function () {
+                var topOfWindow = $(window).scrollTop();
+                var last = $("body").height() - $(window).height();
+
+                // console.log('imagePos(offset.top)  ' + imagePos);
+                // console.log('imageHeight(this.height)  ' + imageHeight);
+                // console.log('topOfWindow(window.scrollTop)  ' + topOfWindow);
+
+                if ($(window).scrollTop() >= last) {
+                    $('.content_svg').addClass('add_keyframe');
+                } else if (topOfWindow < 335) {
+                    $('.content_svg').removeClass('add_keyframe');
+                }
+            });
+        });
+
+
     </script>
 </body>
 

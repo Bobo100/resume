@@ -186,7 +186,6 @@ body {
 
 .ability {
   background-color: #333333;
-  height: 400px;
 }
 
 .ability h1 {
@@ -278,6 +277,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 20px;
 }
 
 .ability ul li .skill_text {
@@ -530,21 +530,17 @@ body {
     display: none;
   }
   .resume .education .rwd_education {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .resume .education .rwd_education .rwd_education1 {
-    width: 30%;
+    display: block;
   }
   .resume .education .rwd_education .rwd_education1 img {
+    padding-left: 10px;
     width: 120px;
   }
   .resume .education .rwd_education .rwd_education2 {
-    width: 40%;
-    white-space: nowrap;
+    padding-left: 10px;
+  }
+  .resume .education .rwd_education .rwd_education2 .education_p {
+    padding: 0;
   }
   .resume .ability {
     width: 100%;
@@ -596,14 +592,18 @@ body {
   .resume .education .svg {
     display: none;
   }
-  .resume .education .rwd_education .rwd_education1 {
-    display: none;
+  .resume .education .rwd_education {
+    display: block;
+  }
+  .resume .education .rwd_education .rwd_education1 img {
+    padding-left: 10px;
+    width: 120px;
   }
   .resume .education .rwd_education .rwd_education2 {
-    width: 100%;
+    padding-left: 10px;
   }
   .resume .education .rwd_education .rwd_education2 .education_p {
-    margin: 0;
+    padding: 0;
   }
   .resume .ability {
     width: 100%;
