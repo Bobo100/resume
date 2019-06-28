@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/vue2.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Vue.js 使用 v-for抓出陣列資料</h1>
+        <h3>最簡易的陣列清單 v-for="項目 in 陣列"</h3>
+        <hr>
+        <ul>
+            <li v-for="item in shoplist">{{item}}</li>
+        </ul>
+        <h3>陣列清單中放入一個個商品物件，有名字跟價錢</h3>
+        <ul>
+            <!-- <li v-for="item in shoplist2">{{item.name}}</li> -->
+            <li v-for="(item,id) in shoplist2">
+                <div class="name">{{id+1}}.{{item.name}}:</div>
+                <div class="price">{{item.price}}$</div>
+        </ul>
+        <ul>
+            <li v-for="(item, id) in shoplist3">
+                <h4>{{id}}</h4>
+                <div class="name">名稱</div>
+                <div class="price">{{item.name}}</div>
+                <br>
+                <div class="name">價錢</div>
+                <div class="price">{{item.price}}$</div>
+                <br>
+                <div class="name">生產國家</div>
+                <span v-for="country in item.produce">{{country}}/</span>
+        </ul>
+    </div>
+
+    <script>
+        var outer_data = {
+            shoplist: ["apple", "banana", "papaya"],
+            shoplist2: [
+                {
+                    name: "apple",
+                    price: 1000
+                },
+                {
+                    name: "banana",
+                    price: 500
+                },
+                {
+                    name: "papaya",
+                    price: 300
+                }], shoplist3: [
+                    {
+                        name: "apple",
+                        price: 1000,
+                        produce: ["美國", "日本"]
+                    },
+                    {
+                        name: "banana",
+                        price: 500,
+                        produce: ["台灣", "韓國", "菲律賓"]
+                    },
+                    {
+                        name: "papaya",
+                        price: 300,
+                        produce: ["亞特蘭提斯", "印度"]
+                    }]
+        }
+
+
+        var vm = new Vue({
+            el: "#app", //作用的範圍
+            data: outer_data
+        })
+    </script>
+</body>
+
+</html>

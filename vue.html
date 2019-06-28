@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1> Vue.js 使用大括號與變數代換</h1>
+        <hr>
+
+        <p>我的名字叫做{{name}}，來自{{company}}，<br>最近正在測試{{learn_thing}}，<br>需要工作{{vue_text}}</p>
+        <ul>
+            <li>{{skills[0]}}</li>
+            <li>{{skills[1]}}</li>
+            <li>{{skills[2]}}</li>
+        </ul>
+        <ul>
+            <li v-for="skillt in skills">{{skillt}}</li>
+        </ul>
+        <p>工作經驗：{{infos.year}}</p>
+        <div v-html="html">{{html}}</div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                name: "XXX",
+                company: "...我也不知道",
+                learn_thing: "Vue.js",
+                vue_text: "vue.js填資料空格的js前端框架",
+                skills: ["網頁程式開發", "Wordpress基礎", "C語言", "Javascript"],
+                infos: {
+                    year: 5
+                },
+                html: "<div class='block'>TEST</div><div class='block'>TEST2</div><div class='block'>TEST3</div>"
+            }
+        });
+
+        // new Vue({
+        //     data: {
+        //         a: "5"
+        //     },
+        //     created: function () {
+        //         // `this` 指向 vm 实例
+        //         console.log('a is: ' + this.a)
+        //     }
+        // });
+// => "a is: 1"
+
+
+    </script>
+</body>
+
+</html>
