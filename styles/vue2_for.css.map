@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": ";AAAA,AAAA,CAAC,CAAC;EACA,WAAW,EAAE,UAAU;CACxB;;AACD,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,IAAI;CACd;;AAED,AAAA,EAAE,CAAC;EACD,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,GAAG;CACnB;;AACD,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;CACZ;;AAED,AAAA,KAAK;AACL,MAAM,CAAC;EACL,OAAO,EAAE,YAAY;CACtB",
     "sources": [
-        "vue2.scss"
+        "vue2_for.scss"
     ],
     "names": [],
-    "file": "vue2.css"
+    "file": "vue2_for.css"
 }

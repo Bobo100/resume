@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
   font-family: 微軟正黑體;
+  border: solid 1px black;
 }
 
 body {
@@ -34,8 +35,8 @@ body {
   width: 100%;
 }
 
-.book .name a {
-  height: 50%;
+.book .name {
+  margin-top: 0;
 }
 
 .book .author,
@@ -53,7 +54,6 @@ body {
 
 .book .name {
   font-size: 18px;
-  margin: 0;
 }
 
 .book .name a {
@@ -83,5 +83,28 @@ body {
 
 .book.detail img .infos {
   width: calc(100% - 150px -20px);
+}
+
+.big {
+  width: 280px;
+  height: 400px;
+  vertical-align: bottom;
+}
+
+.big img {
+  margin-bottom: 5px;
+}
+
+.detail.big {
+  height: initial;
+  padding: 20px;
+}
+
+.detail.big img {
+  width: 220px;
+}
+
+.detail.big img .infos {
+  width: calc(100% - 220px -20px);
 }
 /*# sourceMappingURL=vuebook.css.map */

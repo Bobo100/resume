@@ -33,23 +33,29 @@
             </span>
         </label>
         <label for="">小呈現
-            <input type="radio" v-model="mode_size" value="small">
+            <input type="radio" v-model="mode_size" v-bind:value="true">
         </label>
         <label for="">大呈現
-            <input type="radio" v-model="mode_size" value="big">
+            <input type="radio" v-model="mode_size" v-bind:value="false">
         </label>
+        {{mode_size}}
         <br>
         <div class="container">
-            <div class="book" v-for="book in books" :class="{detail: mode_detail}">
+            <div class="book" v-for="book in books" v-bind:class="[{detail: mode_detail}, mode_size?'small':'big']">
                 <img v-bind:src="book.img" alt="">
                 <div class="infos">
-                    <h2 class="name">
+                    <h2 class="name" v-if="!mode_detail">
                         <a v-bind:href="book.link_book" target="_blank">{{book.name.substring(0,18)}}</a>
                     </h2>
+                    <h2 class="name" v-if="mode_detail">
+                        <a v-bind:href="book.link_book" target="_blank">{{book.name}}</a>
+                    </h2>
                     <!-- <div class="display"> -->
-                    <h4 class="author">
-                        <a v-bind:href="book.link_author" target="_blank">作者：{{book.author}}</a>
-                    </h4>
+                    <div>
+                        <h4 class="author">
+                            <a v-bind:href="book.link_author" target="_blank">作者：{{book.author}}</a>
+                        </h4>
+                    </div>
                     <h4 class="publish" v-if="mode_detail">
                         <a v-bind:href="book.publish_house" target="_blank">出版社：{{book.publish_house}}</a>
                     </h4>
@@ -165,7 +171,7 @@
             el: "#app",
             data: {
                 mode_detail: false,
-                mode_size: "small",
+                mode_size: "true",
                 books: bookdatas
             }
         });

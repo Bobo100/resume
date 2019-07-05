@@ -1,0 +1,53 @@
+* {
+  font-family: 微軟正黑體;
+}
+body {
+  padding: 20px;
+}
+#app2 {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      padding: 5px;
+      border-bottom: solid 1px #bbb;
+      width: 300px;
+      .name,
+      .price {
+        display: inline-flex;
+      }
+      .name {
+        width: 100px;
+      }
+    }
+  }
+}
+#app3 {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      display: flex;
+      border-bottom: solid 1px #bbb;
+      padding: 5px;
+      img {
+        width: 200px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+      }
+      .classinfo {
+        width: calc(100% - 200px - 20px);
+        h4,
+        h5 {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 16px;
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+}
