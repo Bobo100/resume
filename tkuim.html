@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/tkuim.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav1">
+            <ul>
+                <li>淡江資管首頁</li>
+                <li>淡江大學首頁</li>
+                <li>English Site</li>
+            </ul>
+        </div>
+        <div class="nav2">
+            <!-- <img src="http://hacktku.org/2016/sponsor/tkuim.png" alt=""> -->
+            <img src="http://www.im.tku.edu.tw/wp-content/themes/tkuim/logo.png" alt="">
+            <ul class="first">
+                <li class="first_li"><a href="">最新消息</a></li>
+                <li class="first_li"><a href="">系所簡介</a></li>
+                <li class="first_li"><a href="">師資陣容</a></li>
+                <li class="first_li"><a href="">課程資訊</a></li>
+                <li class="first_li"><a href="">學生園地</a></li>
+                <li class="first_li"><a href="">招生資訊</a>
+                    <ul class="second">
+                        <li class="second_li"><a href="">資管系優勢</a></li>
+                        <li class="second_li"><a href="">大學部</a></li>
+                        <li class="second_li"><a href="">碩士班</a></li>
+                        <li class="second_li"><a href="">碩專班</a></li>
+                    </ul>
+                </li>
+                <li class="first_li"><a href="">服務資源</a>
+                    <ul class="second">
+                        <li class="second_li"><a href="">證照專區</a></li>
+                        <li class="second_li"><a href="">交換生專區</a></li>
+                        <li class="second_li"><a href="">獎學金專區</a></li>
+                        <li class="second_li"><a href="">專題製作專區</a></li>
+                        <li class="second_li"><a href="">系外資訊相關競賽</a></li>
+                    </ul>
+                </li>
+                <li class="first_li">
+                    <a href="">系友專區</a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="搜尋">
+                <button>搜尋</button>
+            </div>
+        </div>
+        <div class="imp_info">
+            <div class="one">
+                <div class="div">
+                    <p>最新消息</p>
+                </div>
+                <div class="div title">
+                    <p>新聞內容
+                        <svg height="10" width="50%">
+                            <line x1="0" y1="0" x2="100%" y2="0"></line>
+                        </svg></p>
+                </div>
+                <div class="div test">
+                    <p>2019.08.13 本系學生王莉婷參加2019世界盃電腦應用技能競賽獲得word2013冠軍</p>
+                </div>
+            </div>
+            <div class="one">
+                <div class="div">
+                    <p>最新消息</p>
+                </div>
+                <div class="div title">
+                    <p>新聞內容
+                        <svg height="10" width="50%">
+                            <line x1="0" y1="0" x2="100%" y2="0"></line>
+                        </svg></p>
+                </div>
+                <div class="div test">
+                    <p>2019.08.13 本系學生王莉婷參加2019世界盃電腦應用技能競賽獲得word2013冠軍</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="carousel">
+            <i id="prevbtn" class="far fa-arrow-alt-circle-left"></i>
+            <div class="carousel_center">
+                <div class="mySlides">
+                    <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/%E5%9C%98%E9%AB%94%E7%85%A71-1-1800x500.jpg"
+                        alt="">
+                </div>
+
+                <div class="mySlides">
+                    <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/%E5%9C%98%E9%AB%94%E7%85%A72-1-1800x500.jpg"
+                        alt="">
+                </div>
+
+                <div class="mySlides">
+                    <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/P1010567-1-1800x500.jpg" alt="">
+                </div>
+            </div>
+            <i id="nexbtn" class="far fa-arrow-alt-circle-right"></i>
+        </div> -->
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/%E5%9C%98%E9%AB%94%E7%85%A71-1-1800x500.jpg"
+                    style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/P1010567-1-1800x500.jpg"
+                    style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="http://www.im.tku.edu.tw/wp-content/uploads/2018/11/AIWISFIN-%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%B0%8D%E8%A9%B1%E5%BC%8F%E7%90%86%E8%B2%A1%E6%A9%9F%E5%99%A8%E4%BA%BA-3-1800x500.jpg"
+                    style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <br>
+            <div class="dot_bar">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+        <div class="info">
+
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            var i;
+            if (n > slides.length - 1) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+        }
+        // var slides = document.getElementsByClassName("mySlides");
+        // console.log(slides);
+    </script>
+</body>
+
+</html>

@@ -58,8 +58,10 @@
                 notifydata: "載入中"
             },
             mounted() {
-                axios
-                    .get("https://awiclass.monoame.com/api/command.php?type=get&name=notifydata")
+                // axios
+                //     .get("https://awiclass.monoame.com/api/command.php?type=get&name=notifydata")
+                //     .then(response => (this.notifydata = response.data))
+                fetch('https://awiclass.monoame.com/api/command.php?type=get&name=notifydata')
                     .then(response => (this.notifydata = response.data))
             },
             // mounted() {
